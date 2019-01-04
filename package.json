@@ -4,8 +4,11 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "webpack:prod": "webpack --mode production",
-    "webpack:dev": "webpack --mode development --watch true",
+    "presetup": "npm i",
+    "setup": "npm run w:prod",
+    "w:prod": "webpack --mode production",
+    "postw:prod": "npm run electron:view",
+    "w:dev": "webpack --mode development --watch true",
     "electron:view": "electron .",
     "electron:build": "electron-builder"
   },

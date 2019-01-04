@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter , Route} from 'react-router-dom';
+import { BrowserRouter , Route, Switch} from 'react-router-dom';
+import MainPage from './pages/MainPage/MainPage.jsx';
 
 class App extends Component {
 
@@ -13,9 +14,9 @@ class App extends Component {
             : window.__INITIAL_DATA__;
         return (
           <BrowserRouter>
-            <div>
-              <p>app ready !</p>
-            </div>
+            <Fragment>
+              <Route path="/" exact="true" component={MainPage} />
+            </Fragment>
           </BrowserRouter>
         );
     }
