@@ -4,8 +4,9 @@ let mainWindow = null;
 function createWindow() {
 
  mainWindow = new BrowserWindow({
-  width:600,
-  height:400
+  frame: true,
+  width:1000,
+  height:600
  });
 
  mainWindow.loadFile(path.resolve(__dirname,'build/index.html'));

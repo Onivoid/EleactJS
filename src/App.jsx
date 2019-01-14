@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter , Route, Switch} from 'react-router-dom';
+import { BrowserRouter , Route, Switch, Redirect} from 'react-router-dom';
 import MainPage from './pages/MainPage/MainPage.jsx';
 
 class App extends Component {
@@ -15,6 +15,7 @@ class App extends Component {
         return (
           <BrowserRouter>
             <Fragment>
+              { window.location.pathname.includes('index.html') && <Redirect to="/" /> }
               <Route path="/" exact="true" component={MainPage} />
             </Fragment>
           </BrowserRouter>
