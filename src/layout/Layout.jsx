@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import './Layout.sass';
 import { ipcRenderer } from 'electron';
 
 class Layout extends Component {
@@ -22,7 +21,9 @@ class Layout extends Component {
 
           <div className="infos">
             <i className="fas fa-layer-group"></i>
-            <p className="appName"> Electron UI </p>
+            <p className="appName"> 
+              Electron UI -- Build with React -- Environnement Webpack 
+            </p>
           </div>
 
           <div className="controls">

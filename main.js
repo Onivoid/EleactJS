@@ -1,5 +1,6 @@
-const { app, BrowserWindow, ipcMain} = require('electron');
+const { app, BrowserWindow, ipcMain, shell} = require('electron');
 const path = require('path');
+
 let mainWindow = null;
 
 function createWindow() {
@@ -8,8 +9,8 @@ function createWindow() {
         show: false,
         frame: false,
         transparent: true,
-        width:1000,
-        height:600
+        minWidth:1000,
+        minHeight:600
     });
 
     mainWindow.loadFile(path.resolve(__dirname,'build/index.html'));
@@ -36,4 +37,7 @@ app.on('ready', () => {
         mainWindow.minimize();
     })
 
+    ipcMain.on('externalLink', (evt, arg) => {
+        shell.openExternal(arg)
+    })
 });

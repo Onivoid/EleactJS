@@ -1,0 +1,50 @@
+.MainPage
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 92vh
+    .message
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin-bottom: 30px
+        color: rgba(130, 204, 221,1.0)
+        .title
+            +title
+            text-align: center
+        .subtitle
+            +subtitle
+            text-align: center
+    .stack
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        svg
+            margin-left: 20px
+            font-size: 40px
+            color: #f5f5f5
+        .logo
+            animation: RotateClock 5s infinite linear
+            width: 150px
+    .contact
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin-top: 30px
+        color: rgba(248, 194, 145,1.0)
+        .subtitle
+            +subtitle
+            text-align: center
+        .social
+            margin-top: 15px
+            svg
+                color: #f5f5f5
+                font-size: 40px
+                margin: 0 10px
+                transition: all .3s
+                &:hover
+                    color: rgba(184, 233, 148,1.0)

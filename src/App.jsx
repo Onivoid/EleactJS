@@ -7,6 +7,7 @@ class App extends Component {
 
     constructor(props) {
         super(props);
+        this.path = window.location.pathname;
     }
 
     render() {
@@ -16,8 +17,7 @@ class App extends Component {
         return ( 
             <BrowserRouter>
                 <Layout>
-                    { window.location.pathname.includes('index.html') && <Redirect to="/" /> }
-                    <Route path="/" exact="true" component={MainPage} />
+                    <Route path={this.path} exact="true" component={MainPage} />
                 </Layout>
             </BrowserRouter>
         );
